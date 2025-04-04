@@ -60,7 +60,7 @@ A collection of interactive Jupyter notebooks in Kotlin, organized by project.
   Each notebook builds on the previous one, guiding you from basic concepts to advanced AI integrations.
 
   | Notebook                                                                                   | Description                                                                     |
-  |--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+      |--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
   | **[1. Intro](notebooks/spring-ai/tutorials/1.%20Intro.ipynb)**                             | Introduction to Spring AI fundamentals and setup with Kotlin                    |
   | **[2. Prompts](notebooks/spring-ai/tutorials/2.%20Prompts.ipynb)**                         | Working with prompt engineering techniques and best practices                   |
   | **[3. Streaming](notebooks/spring-ai/tutorials/3.%20Streaming.ipynb)**                     | Implementing streaming responses for real-time AI interactions                  |
@@ -71,6 +71,16 @@ A collection of interactive Jupyter notebooks in Kotlin, organized by project.
   | **[8. Text-to-Image](notebooks/spring-ai/tutorials/8.%20text-to-image.ipynb)**             | Converting text descriptions into generated images with Spring AI               |
   | **[9. Text-to-Audio](notebooks/spring-ai/tutorials/9.%20text-to-audio.ipynb)**             | Creating speech from text and transcribing audio with AI models                 |
   | **[10. Local Model](notebooks/spring-ai/tutorials/10.%20Local%20model.ipynb)**             | Running AI models locally on your machine using Ollama and Spring AI            |
+
+### AI Agents Kotlin Notebooks ([`/notebooks/agents`](notebooks/agents))
+
+| Notebook                                                                           | Description                                                                                                                                 |
+|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| **[Prompt Chaining](notebooks/agents/Prompt-Chaining%20Workflow.ipynb)**           | Implements a sequential workflow that breaks complex tasks into simpler steps, where each LLM call processes the output of the previous one |
+| **[Routing](notebooks/agents/Routing%20Workflow.ipynb)**                           | Shows how to classify inputs and direct them to specialized handlers, optimizing for different types of requests                            |
+| **[Parallelization](notebooks/agents/Parallelization%20Workflow.ipynb)**           | Demonstrates running multiple LLM tasks simultaneously using Kotlin coroutines for improved performance                                     |
+| **[Orchestrator-Workers](notebooks/agents/Orchestrator-Workers%20Workflow.ipynb)** | Implements a pattern where a central LLM breaks down tasks dynamically and delegates them to specialized worker LLMs                        |
+| **[Evaluator-Optimizer](notebooks/agents/Evaluator-Optimizer%20Workflow.ipynb)**   | Creates a feedback loop where one LLM generates responses and another evaluates them for continuous improvement                             |
 
 ### LangChain4j Kotlin Notebooks ([`/notebooks/langchain4j`](notebooks/langchain4j))
 
