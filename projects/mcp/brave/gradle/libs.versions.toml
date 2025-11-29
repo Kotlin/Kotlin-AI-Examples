@@ -3,7 +3,7 @@
 
 [versions]
 kotlin = "2.1.10"
-mcp = "0.3.0"
+mcp = "0.8.0"
 slf4j = "2.0.9"
 
 [libraries]
