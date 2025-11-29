@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "2.1.21"
     kotlin("plugin.spring") version "2.1.21"
-    id("org.springframework.boot") version "3.5.0"
+    id("org.springframework.boot") version "4.0.0"
     id("io.spring.dependency-management") version "1.1.7"
     id("com.vaadin") version "24.6.5"
 }
@@ -21,7 +21,7 @@ repositories {
 }
 
 val vaadinVersion = "24.6.5"
-val springAiVersion = "1.0.0"
+val springAiVersion = "1.1.0"
 val coroutinesVersion = "1.10.2"
 
 dependencies {
