@@ -2,7 +2,7 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-kotlin = "2.2.21"
+kotlin = "2.3.0"
 mcp = "0.8.0"
 ktor = "3.3.3"
 slf4j = "2.0.9"
