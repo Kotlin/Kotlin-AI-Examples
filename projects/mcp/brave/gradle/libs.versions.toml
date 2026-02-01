@@ -4,7 +4,7 @@
 [versions]
 kotlin = "2.3.0"
 mcp = "0.8.0"
-ktor = "3.3.3"
+ktor = "3.4.0"
 slf4j = "2.0.9"
 
 [libraries]
