@@ -1,5 +1,9 @@
 # <img src="https://raw.githubusercontent.com/devcrocod/Kotlin-AI-Examples/refs/heads/master/img/kotlin_icon.svg" width="30"/> Kotlin <img src="https://raw.githubusercontent.com/devcrocod/Kotlin-AI-Examples/refs/heads/master/img/AI_icon.svg" width="30"/> AI Examples
 
+![Kotlin](https://img.shields.io/badge/Kotlin-19191c?logo=kotlin&link=https%3A%2F%2Fkotlinlang.org)
+![Kotlin Notebook](https://img.shields.io/badge/Kotlin_Notebook-19191c?logo=kotlin&link=https%3A%2F%2Fplugins.jetbrains.com%2Fplugin%2F16340-kotlin-notebook)
+![License](https://img.shields.io/badge/License-Apache%202.0-4285F4)
+
 **Kotlin AI Examples** is a repository showcasing various AI frameworks integrated into Kotlin-based projects.  
 Here you’ll find ready-to-use examples for Spring AI, LangChain4j, as well as interactive Kotlin notebooks.
 
@@ -49,7 +53,10 @@ This section contains complete Kotlin projects demonstrating AI integrations.
 
 ## Kotlin Notebooks ([`/notebooks`](notebooks))
 
-A collection of interactive Jupyter notebooks in Kotlin, organized by project.
+A collection of interactive Kotlin notebooks, organized by project.
+
+> [!TIP]
+> For detailed descriptions, getting started guide, and tutorials, see the **[Kotlin AI Notebooks README](notebooks/README.md)**.
 
 ### Spring AI Kotlin Notebooks ([`/notebooks/spring-ai`](notebooks/spring-ai))
 
@@ -128,8 +135,12 @@ A collection of interactive Jupyter notebooks in Kotlin, organized by project.
 
 ## Getting Started
 
-Each project in the [`projects`](projects) directory has its own README with detailed instructions on how to run and use
-the examples.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kotlin/Kotlin-AI-Examples.git
+   ```
+2. For **projects** — each project in [`projects/`](projects) has its own README with setup and run instructions
+3. For **notebooks** — open in **IntelliJ IDEA** (Kotlin Notebook plugin is bundled), then open any `.ipynb` file
 
 ---
 
@@ -141,7 +152,7 @@ the examples.
 
 ---
 
-> **Note**  
+> [!NOTE]
 > Make sure you have the necessary access credentials for your chosen AI service (OpenAI, Azure, VertexAI, etc.) and the
 > required dependencies in your build scripts (Gradle/Maven).
 
