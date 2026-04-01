@@ -20,7 +20,7 @@ repositories {
     maven { url = uri("https://maven.vaadin.com/vaadin-prereleases") }
 }
 
-val vaadinVersion = "25.0.4"
+val vaadinVersion = "25.1.1"
 val springAiVersion = "1.1.0"
 val coroutinesVersion = "1.10.2"
 
