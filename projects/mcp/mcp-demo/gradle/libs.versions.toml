@@ -7,7 +7,7 @@ kotlinx-coroutines = "1.10.2"
 mcp = "0.8.3"
 slf4j = "2.0.17"
 ktor = "3.4.0"
-shadow = "9.3.0"
+shadow = "9.4.1"
 openai = "4.23.0"
 
 [libraries]
