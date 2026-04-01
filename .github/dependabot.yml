@@ -12,9 +12,14 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
 
-  # Spring AI projects
+  # Spring AI projects (consolidated)
   - package-ecosystem: "gradle"
-    directory: "/projects/spring-ai/helloworld"
+    directories:
+      - "/projects/spring-ai/helloworld"
+      - "/projects/spring-ai/springAI-demo"
+      - "/projects/spring-ai/spring-ai-examples"
+      - "/projects/spring-ai/spring-ai-mcp-server-example"
+      - "/projects/spring-ai/playground-flight-booking"
     schedule:
       interval: "monthly"
     labels:
@@ -24,6 +29,9 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
     groups:
+      gradle-wrapper:
+        patterns:
+          - "gradle-wrapper"
       spring-ai-deps:
         patterns:
           - "org.springframework*"
@@ -32,87 +40,19 @@ updates:
         patterns:
           - "org.jetbrains.kotlin*"
           - "org.jetbrains.kotlinx*"
-
-  - package-ecosystem: "gradle"
-    directory: "/projects/spring-ai/springAI-demo"
-    schedule:
-      interval: "monthly"
-    labels:
-      - "dependencies"
-      - "spring-ai"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
-    groups:
-      spring-ai-deps:
+      vaadin-deps:
         patterns:
+          - "com.vaadin*"
+      other-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "gradle-wrapper"
           - "org.springframework*"
           - "io.spring*"
-      kotlin-deps:
-        patterns:
           - "org.jetbrains.kotlin*"
           - "org.jetbrains.kotlinx*"
-
-  - package-ecosystem: "gradle"
-    directory: "/projects/spring-ai/spring-ai-examples"
-    schedule:
-      interval: "monthly"
-    labels:
-      - "dependencies"
-      - "spring-ai"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
-    groups:
-      spring-ai-deps:
-        patterns:
-          - "org.springframework*"
-          - "io.spring*"
-      kotlin-deps:
-        patterns:
-          - "org.jetbrains.kotlin*"
-          - "org.jetbrains.kotlinx*"
-
-  - package-ecosystem: "gradle"
-    directory: "/projects/spring-ai/spring-ai-mcp-server-example"
-    schedule:
-      interval: "monthly"
-    labels:
-      - "dependencies"
-      - "spring-ai"
-      - "mcp"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
-    groups:
-      spring-ai-deps:
-        patterns:
-          - "org.springframework*"
-          - "io.spring*"
-      kotlin-deps:
-        patterns:
-          - "org.jetbrains.kotlin*"
-          - "org.jetbrains.kotlinx*"
-
-  - package-ecosystem: "gradle"
-    directory: "/projects/spring-ai/playground-flight-booking"
-    schedule:
-      interval: "monthly"
-    labels:
-      - "dependencies"
-      - "spring-ai"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
-    groups:
-      spring-ai-deps:
-        patterns:
-          - "org.springframework*"
-          - "io.spring*"
-      kotlin-deps:
-        patterns:
-          - "org.jetbrains.kotlin*"
-          - "org.jetbrains.kotlinx*"
+          - "com.vaadin*"
 
   # LangChain4j project
   - package-ecosystem: "gradle"
@@ -126,6 +66,9 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
     groups:
+      gradle-wrapper:
+        patterns:
+          - "gradle-wrapper"
       langchain4j-deps:
         patterns:
           - "dev.langchain4j*"
@@ -136,10 +79,21 @@ updates:
         patterns:
           - "org.jetbrains.kotlin*"
           - "org.jetbrains.kotlinx*"
+      other-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "gradle-wrapper"
+          - "dev.langchain4j*"
+          - "org.springframework*"
+          - "org.jetbrains.kotlin*"
+          - "org.jetbrains.kotlinx*"
 
-  # MCP projects
+  # MCP projects (consolidated)
   - package-ecosystem: "gradle"
-    directory: "/projects/mcp/mcp-demo"
+    directories:
+      - "/projects/mcp/mcp-demo"
+      - "/projects/mcp/brave"
     schedule:
       interval: "monthly"
     labels:
@@ -149,6 +103,9 @@ updates:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
     groups:
+      gradle-wrapper:
+        patterns:
+          - "gradle-wrapper"
       mcp-deps:
         patterns:
           - "io.modelcontextprotocol*"
@@ -162,26 +119,15 @@ updates:
       compose-deps:
         patterns:
           - "org.jetbrains.compose*"
-          - "androidx.compose*"
-
-  - package-ecosystem: "gradle"
-    directory: "/projects/mcp/brave"
-    schedule:
-      interval: "monthly"
-    labels:
-      - "dependencies"
-      - "mcp"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-patch"]
-    groups:
-      mcp-deps:
+          - "androidx.*"
+      other-deps:
         patterns:
+          - "*"
+        exclude-patterns:
+          - "gradle-wrapper"
           - "io.modelcontextprotocol*"
-      ktor-deps:
-        patterns:
           - "io.ktor*"
-      kotlin-deps:
-        patterns:
           - "org.jetbrains.kotlin*"
           - "org.jetbrains.kotlinx*"
+          - "org.jetbrains.compose*"
+          - "androidx.*"
