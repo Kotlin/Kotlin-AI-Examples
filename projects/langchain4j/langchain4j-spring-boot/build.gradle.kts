@@ -18,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-val langchain4jVersion = "1.11.0-beta19"
+val langchain4jVersion = "1.12.2-beta22"
 val coroutinesVersion = "1.10.2"
 
 dependencies {
