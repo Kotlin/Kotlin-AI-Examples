@@ -22,7 +22,7 @@ repositories {
 
 val vaadinVersion = "25.1.1"
 val springAiVersion = "1.1.0"
-val coroutinesVersion = "1.10.2"
+val coroutinesVersion = "1.11.0"
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
