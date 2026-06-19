@@ -57,6 +57,6 @@ class RoleController(private val chatClient: ChatClient) {
         val systemPromptTemplate = SystemPromptTemplate(systemResource)
         val systemMessage = systemPromptTemplate.createMessage(mapOf("name" to name, "voice" to voice))
         val prompt = Prompt(listOf(userMessage, systemMessage))
-        return chatClient.prompt(prompt).call().chatResponse()!!.result.output
+        return chatClient.prompt(prompt).call().chatResponse()!!.result!!.output
     }
 }

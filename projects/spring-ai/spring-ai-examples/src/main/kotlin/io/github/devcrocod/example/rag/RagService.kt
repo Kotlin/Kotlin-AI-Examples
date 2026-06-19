@@ -62,8 +62,8 @@ class RagService(
         val chatResponse = chatClient.prompt(prompt).call().chatResponse()!!
         logger.info("AI responded.")
 
-        logger.info(chatResponse.result.output.text)
-        return chatResponse.result.output!!
+        logger.info(chatResponse.result?.output?.text)
+        return chatResponse.result?.output!!
     }
 
     private fun getSystemMessage(similarDocuments: List<Document>): Message {

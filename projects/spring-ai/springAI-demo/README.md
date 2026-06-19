@@ -49,14 +49,21 @@ select your operating system, and follow the installation instructions.
 
 For the vector store, we will use [Qdrant](https://qdrant.tech/documentation/overview/).
 
-After installing Docker, open your terminal and run the following command to start the container:
+After installing Docker, start Qdrant using the [`compose.yaml`](compose.yaml) file included in this project:
 
 ```shell
-docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
+docker compose up -d
 ```
 
-We have mapped two ports: 6333 is used for accessing the dashboard,
+This starts a Qdrant container and maps two ports: 6333 is used for accessing the dashboard,
 and 6334 is used for interaction with the Spring application.
+A named volume (`qdrant_storage`) keeps your data between restarts.
+
+To stop the container, run:
+
+```shell
+docker compose down
+```
 
 After startup, you will see the relevant information in the terminal, and you can open the dashboard:
 
@@ -149,8 +156,8 @@ In the opened project, set the required properties in
 ```properties
 # OpenAI
 spring.ai.openai.api-key=${OPENAI_API_KEY}
-spring.ai.openai.chat.options.model=gpt-4o-mini
-spring.ai.openai.embedding.options.model=text-embedding-ada-002
+spring.ai.openai.chat.model=gpt-4o-mini
+spring.ai.openai.embedding.model=text-embedding-ada-002
 # Qdrant
 spring.ai.vectorstore.qdrant.host=localhost
 spring.ai.vectorstore.qdrant.port=6334
