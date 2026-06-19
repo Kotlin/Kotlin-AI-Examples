@@ -1,7 +1,8 @@
 package io.github.devcrocod.example.playground
 
+import com.vaadin.flow.component.dependency.StyleSheet
 import com.vaadin.flow.component.page.AppShellConfigurator
-import com.vaadin.flow.theme.Theme
+import com.vaadin.flow.theme.lumo.Lumo
 import io.micrometer.observation.ObservationPredicate
 import org.springframework.ai.chat.memory.ChatMemory
 import org.springframework.ai.chat.memory.MessageWindowChatMemory
@@ -17,7 +18,10 @@ import org.springframework.core.io.Resource
 import org.springframework.http.server.observation.ServerRequestObservationContext
 
 @SpringBootApplication
-@Theme(value = "customer-support-agent")
+// Vaadin 25 removed @Theme; load Lumo base styles + the Lumo utility classes
+// (the views use utility classes like `flex`, `gap-m`, `p-m`, `font-bold`).
+@StyleSheet(Lumo.STYLESHEET)
+@StyleSheet(Lumo.UTILITY_STYLESHEET)
 class Application : AppShellConfigurator {
     /** Index the Terms-of-Service document into the vector store. */
     @Bean
@@ -26,9 +30,10 @@ class Application : AppShellConfigurator {
         @Value("classpath:rag/terms-of-service.txt") termsOfServiceDocs: Resource
     ): CommandLineRunner = CommandLineRunner {
         vectorStore.write(
-            TokenTextSplitter().transform(
-                TextReader(termsOfServiceDocs).read()
-            )
+            TokenTextSplitter
+                .builder()
+                .build()
+                .transform(TextReader(termsOfServiceDocs).read())
         )
     }
 

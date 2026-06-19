@@ -76,7 +76,7 @@ class KotlinSTDController(
             .topK(topK)
             .build()
         val results = vectorStore.similaritySearch(searchRequest)
-        logger.info("Found ${results?.size ?: 0} documents for query: '$query'")
+        logger.info("Found ${results.size} documents for query: '$query'")
         return results
     }
 

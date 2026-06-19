@@ -1,7 +1,7 @@
 plugins {
-    kotlin("jvm") version "2.3.10"
-    kotlin("plugin.spring") version "2.3.10"
-    id("org.springframework.boot") version "4.0.0"
+    kotlin("jvm") version "2.4.0"
+    kotlin("plugin.spring") version "2.4.0"
+    id("org.springframework.boot") version "4.0.7"
     id("io.spring.dependency-management") version "1.1.7"
     id("com.vaadin") version "25.1.1"
 }
@@ -20,8 +20,8 @@ repositories {
     maven { url = uri("https://maven.vaadin.com/vaadin-prereleases") }
 }
 
-val vaadinVersion = "25.1.1"
-val springAiVersion = "1.1.0"
+val vaadinVersion = "25.1.8"
+val springAiVersion = "2.0.0"
 val coroutinesVersion = "1.11.0"
 
 dependencies {
@@ -33,11 +33,12 @@ dependencies {
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
     /* --------------------------- Vector Stores ---------------------------- */
     implementation("org.springframework.ai:spring-ai-starter-vector-store-chroma")
-    implementation("org.springframework.ai:spring-ai-advisors-vector-store")
+    implementation("org.springframework.ai:spring-ai-vector-store-advisor")
 
     /* ------------------------------ Vaadin -------------------------------- */
     implementation("com.vaadin:vaadin-spring-boot-starter")
     implementation("com.vaadin:hilla-spring-boot-starter")
+    developmentOnly("com.vaadin:vaadin-dev:$vaadinVersion")
 
     /* --------------------------- Spring Starters -------------------------- */
     implementation("org.springframework.boot:spring-boot-starter-webflux")

@@ -21,7 +21,7 @@ class PromptTemplateController(private val chatClient: ChatClient) {
     ): AssistantMessage {
         val promptTemplate = PromptTemplate(jokeResource)
         val prompt = promptTemplate.create(mapOf("adjective" to adjective, "topic" to topic))
-        return chatClient.prompt(prompt).call().chatResponse()!!.result.output
+        return chatClient.prompt(prompt).call().chatResponse()!!.result!!.output
     }
 }
 

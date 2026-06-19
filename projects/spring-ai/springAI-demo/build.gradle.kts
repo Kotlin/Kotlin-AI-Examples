@@ -1,7 +1,7 @@
 plugins {
-	kotlin("jvm") version "2.3.0"
-	kotlin("plugin.spring") version "2.3.0"
-	id("org.springframework.boot") version "4.0.0"
+	kotlin("jvm") version "2.4.0"
+	kotlin("plugin.spring") version "2.4.0"
+	id("org.springframework.boot") version "4.0.7"
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -18,7 +18,7 @@ repositories {
 	mavenCentral()
 }
 
-val springAiVersion = "1.1.0"
+val springAiVersion = "2.0.0"
 
 dependencyManagement {
 	imports {
@@ -32,7 +32,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.ai:spring-ai-starter-model-openai")
 	implementation("org.springframework.ai:spring-ai-starter-vector-store-qdrant")
-	implementation("org.springframework.ai:spring-ai-advisors-vector-store")
+	implementation("org.springframework.ai:spring-ai-vector-store-advisor")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
