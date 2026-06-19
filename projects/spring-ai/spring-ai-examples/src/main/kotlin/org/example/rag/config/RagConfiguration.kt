@@ -1,6 +1,6 @@
 package org.example.rag.config
 
-import io.github.devcrocod.example.rag.RagService
+import org.example.rag.RagService
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.embedding.EmbeddingModel
 import org.springframework.context.annotation.Bean
