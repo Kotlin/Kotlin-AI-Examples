@@ -8,7 +8,7 @@ mcp = "0.12.0"
 slf4j = "2.0.17"
 ktor = "3.5.0"
 shadow = "9.4.1"
-openai = "4.37.0"
+openai = "4.41.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
