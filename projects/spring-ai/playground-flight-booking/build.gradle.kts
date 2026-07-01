@@ -3,7 +3,7 @@ plugins {
     kotlin("plugin.spring") version "2.4.0"
     id("org.springframework.boot") version "4.1.0"
     id("io.spring.dependency-management") version "1.1.7"
-    id("com.vaadin") version "25.1.1"
+    id("com.vaadin") version "25.2.1"
 }
 
 group = "io.github.devcrocod.example"
@@ -20,7 +20,7 @@ repositories {
     maven { url = uri("https://maven.vaadin.com/vaadin-prereleases") }
 }
 
-val vaadinVersion = "25.1.8"
+val vaadinVersion = "25.2.1"
 val springAiVersion = "2.0.0"
 val coroutinesVersion = "1.11.0"
 
