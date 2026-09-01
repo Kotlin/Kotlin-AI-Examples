@@ -1,6 +1,6 @@
 [versions]
 androidx-lifecycle = "2.11.0"
-compose-multiplatform = "1.11.0"
+compose-multiplatform = "1.12.0"
 junit = "4.13.2"
 kotlin = "2.4.0"
 kotlinx-coroutines = "1.11.0"
