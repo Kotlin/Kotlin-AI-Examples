@@ -52,7 +52,7 @@ dependencies {
     runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 
     /* ------------------------------ Logging ------------------------------- */
-    implementation("com.github.loki4j:loki-logback-appender:2.0.1")
+    implementation("com.github.loki4j:loki-logback-appender:2.1.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${coroutinesVersion}")
